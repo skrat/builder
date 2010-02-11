@@ -68,7 +68,7 @@ PKG_FILES.exclude('lib/builder/css.rb')
 
 BLANKSLATE_FILES = FileList[
   'lib/blankslate.rb',
-  'test/testblankslate.rb'
+  'test/test_blankslate.rb'
 ]
 
 if ! defined?(Gem)
