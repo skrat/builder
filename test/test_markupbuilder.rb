@@ -108,7 +108,7 @@ class TestMarkup < Test::Unit::TestCase
   end
 
   def test_reference_methods
-    @xml.title { |x| x.a { x.b(name) } }
+    @xml.title { |x| x.a { x.b("bob") } }
     assert_equal "<title><a><b>bob</b></a></title>", @xml.target!
   end
 
@@ -151,9 +151,6 @@ class TestMarkup < Test::Unit::TestCase
     assert_equal "<div><span><a href=\"ref\">text</a></span></div>", @xml.target!
   end
 
-  def name
-    "bob"
-  end
 end
 
 class TestAttributeEscaping < Test::Unit::TestCase
